@@ -7,7 +7,7 @@ exports.signUp = async (req, res) => {
 
     try {
         const alreadyExist = await User.findOne({ email })
-        // authloger.error("already exist");
+       
         console.log("alreadyExist", alreadyExist)
 
 
@@ -20,11 +20,11 @@ exports.signUp = async (req, res) => {
 
 
         const UserData = await User.insertOne({ email, password: createHashPassword, fullName });
-        // authloger.info("user created succcssfully");
+  
         return res.status(200).json(UserData);
 
     } catch (error) {
-        // authloger.error("Server error",error);
+        
         res.status(500).json({ message: error })
     }
 }
