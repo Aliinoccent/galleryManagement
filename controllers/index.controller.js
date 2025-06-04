@@ -1,6 +1,6 @@
-const {signUp,signIn}=require('./auth.controller');
-const {imagePost,getAllimages,updateimage,deleteImage}=require('../controllers/imageSetup.controller');
-module.exports={
+const { signUp, signIn } = require('./auth.controller');
+const { imagePost, getAllimages, updateimage, deleteImage } = require('../controllers/imageSetup.controller');
+module.exports = {
     signUp,
     signIn,
     imagePost,
